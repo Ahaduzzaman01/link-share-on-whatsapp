@@ -10,6 +10,7 @@
 <!-- HTML button with a click event -->
 <button id="whatsappBtn">Share on WhatsApp</button>
 <button id="telegramBtn">Share on Telegram</button>
+<button id="emailBtn">Share via Email</button>
 
 <!-- JavaScript code -->
 <script>
@@ -45,6 +46,22 @@
 
   // Add click event listener to the button
   document.getElementById('telegramBtn').addEventListener('click', shareOnTelegram);
+
+// email or gmail
+      // Function to handle button click event
+  function shareViaEmail() {
+    // Get the link you want to share
+    var link = 'https://luminouslabsbd.com'; // Replace with your actual link
+
+    // Create the mailto URL with the subject and body parameters
+    var mailtoURL = 'mailto:?subject=Check%20out%20this%20link&body=' + encodeURIComponent(link);
+
+    // Open the mailto URL
+    window.open(mailtoURL);
+  }
+
+  // Add click event listener to the button
+  document.getElementById('emailBtn').addEventListener('click', shareViaEmail);
 </script>
 </body>
 </html>
