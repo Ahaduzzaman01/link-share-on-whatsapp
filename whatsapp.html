@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- HTML button with a click event -->
+<button id="shareBtn">Share on WhatsApp</button>
+
+<!-- JavaScript code -->
+<script>
+  // Function to handle button click event
+  function shareOnWhatsApp() {
+    // Get the link you want to share
+    var link = 'https://luminouslabsbd.com/'; // Replace with your actual link
+
+    // Create the WhatsApp share URL with the link parameter
+    var whatsappURL = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(link);
+
+    // Open the WhatsApp share URL in a new window or tab
+    window.open(whatsappURL);
+  }
+
+  // Add click event listener to the button
+  document.getElementById('shareBtn').addEventListener('click', shareOnWhatsApp);
+</script>
+
+
+</body>
+</html>
