@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 <body>
 
 <!-- HTML button with a click event -->
-<button id="shareBtn">Share on WhatsApp</button>
+<button id="whatsappBtn">Share on WhatsApp</button>
+<button id="telegramBtn">Share on Telegram</button>
 
 <!-- JavaScript code -->
 <script>
+  // whatsapp
   // Function to handle button click event
   function shareOnWhatsApp() {
     // Get the link you want to share
@@ -20,9 +27,24 @@
   }
 
   // Add click event listener to the button
-  document.getElementById('shareBtn').addEventListener('click', shareOnWhatsApp);
+  document.getElementById('whatsappBtn').addEventListener('click', shareOnWhatsApp);
+
+
+  // telegram
+    // Function to handle button click event
+  function shareOnTelegram() {
+    // Get the link you want to share
+    var link = 'https://example.com'; // Replace with your actual link
+
+    // Create the Telegram share URL with the link parameter
+    var telegramURL = 'https://t.me/share/url?url=' + encodeURIComponent(link);
+
+    // Open the Telegram share URL in a new window or tab
+    window.open(telegramURL);
+  }
+
+  // Add click event listener to the button
+  document.getElementById('telegramBtn').addEventListener('click', shareOnTelegram);
 </script>
-
-
 </body>
 </html>
