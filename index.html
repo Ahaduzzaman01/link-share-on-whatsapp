@@ -6,61 +6,35 @@
     <title>Document</title>
 </head>
 <body>
-
-<!-- HTML button with a click event -->
 <button id="whatsappBtn">Share on WhatsApp</button>
 <button id="telegramBtn">Share on Telegram</button>
 <button id="emailBtn">Share via Email</button>
 
-<!-- JavaScript code -->
 <script>
   // whatsapp
-  // Function to handle button click event
   function shareOnWhatsApp() {
-    // Get the link you want to share
-    var link = 'https://luminouslabsbd.com/'; // Replace with your actual link
-
-    // Create the WhatsApp share URL with the link parameter
+    var link = 'https://luminouslabsbd.com/';
     var whatsappURL = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(link);
-
-    // Open the WhatsApp share URL in a new window or tab
     window.open(whatsappURL);
   }
-
-  // Add click event listener to the button
   document.getElementById('whatsappBtn').addEventListener('click', shareOnWhatsApp);
 
 
   // telegram
-    // Function to handle button click event
   function shareOnTelegram() {
-    // Get the link you want to share
-    var link = 'https://luminouslabsbd.com'; // Replace with your actual link
-
-    // Create the Telegram share URL with the link parameter
+    var link = 'https://luminouslabsbd.com';
     var telegramURL = 'https://t.me/share/url?url=' + encodeURIComponent(link);
-
-    // Open the Telegram share URL in a new window or tab
     window.open(telegramURL);
   }
-
-  // Add click event listener to the button
   document.getElementById('telegramBtn').addEventListener('click', shareOnTelegram);
 
+    
 // email or gmail
-      // Function to handle button click event
   function shareViaEmail() {
-    // Get the link you want to share
-    var link = 'https://luminouslabsbd.com'; // Replace with your actual link
-
-    // Create the mailto URL with the subject and body parameters
-    var mailtoURL = 'mailto:?subject=Check%20out%20this%20link&body=' + encodeURIComponent(link);
-
-    // Open the mailto URL
+    var link = 'https://luminouslabsbd.com';
+    var mailtoURL = 'mailto:?subject=Check%20out%20your%20link&body=' + encodeURIComponent(link);
     window.open(mailtoURL);
   }
-
-  // Add click event listener to the button
   document.getElementById('emailBtn').addEventListener('click', shareViaEmail);
 </script>
 </body>
